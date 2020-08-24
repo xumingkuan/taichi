@@ -21,6 +21,6 @@ case_names = [c.__name__ for c in cases]
 
 ti.benchmark_plot(fn='benchmark.yml',
                   cases=case_names,
-                  archs=['x64', 'cuda'],
-                  bars='sync_vs_async',
+                  archs=['x64'],
+                  bars='async_regression',
                   left_margin=0.2)

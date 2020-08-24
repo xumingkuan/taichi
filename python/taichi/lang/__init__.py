@@ -442,11 +442,11 @@ def benchmark_plot(fn=None,
                     baseline_data[case][col][arch]['async']
                     for arch in current_archs
                 ]
-                label_left = 'before'
+                label_left = 'without data-flow optimization'
                 y_right = [
                     data[case][col][arch]['async'] for arch in current_archs
                 ]
-                label_right = 'after'
+                label_right = 'with data-flow optimization'
             else:
                 raise RuntimeError('Unknown bars type')
             if normalize_to_lowest(col):
