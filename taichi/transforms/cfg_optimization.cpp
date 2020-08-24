@@ -8,7 +8,6 @@ TLANG_NAMESPACE_BEGIN
 namespace irpass {
 bool cfg_optimization(IRNode *root, bool after_lower_access) {
   TI_AUTO_PROF;
-  return false;
   auto cfg = analysis::build_cfg(root);
   bool result_modified = false;
   while (true) {
