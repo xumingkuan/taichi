@@ -13,7 +13,7 @@ from fuse_test_template import template_fuse_dense_x2y2z, \
 def benchmark_async(func):
     @functools.wraps(func)
     def body():
-        for arch in [ti.cpu, ti.cuda]:
+        for arch in [ti.cpu]:
             for async_mode in [True, False]:
                 os.environ['TI_CURRENT_BENCHMARK'] = func.__name__
                 ti.init(arch=arch, async_mode=async_mode)
